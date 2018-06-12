@@ -47,11 +47,11 @@ $options = array(
     )
 );
 $mail->smtpConnect($options);
-$mail->From = 'example@gmail.com';  // sender's email address (shows in "From" field)
-$mail->FromName = 'Example Name';   // sender's name (shows in "From" field)
-$mail->addAddress('bw94982@gmail.com', 'Jane');  // Add a recipient
+$mail->From = $message['email'];  // sender's email address (shows in "From" field)
+$mail->FromName = $message['name'];   // sender's name (shows in "From" field)
+$mail->addAddress(EMAIL_TO_ADDRESS);  // Add a recipient
 //$mail->addAddress('ellen@example.com');                        // Name is optional
-$mail->addReplyTo('example@gmail.com');                          // Add a reply-to address
+$mail->addReplyTo($message['email']);                          // Add a reply-to address
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 
@@ -59,9 +59,9 @@ $mail->addReplyTo('example@gmail.com');                          // Add a reply-
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+$mail->Subject = 'A message has been sent to your dev gmail';
+$mail->Body    = $message['message'];
+$mail->AltBody = $message['message'];
 
 if(!$mail->send()) {
     $output['success'] = false;
