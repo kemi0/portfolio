@@ -1100,6 +1100,19 @@ a.text-primary:focus, a.text-primary:hover {
     width:80%;
     margin: auto;
   }
+  .resumeBtn{
+    color: rgba(0, 0, 0, 0.5);;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 5vmin;
+    padding: 10px 20px;
+}
+.resumeBtn:hover{
+  color: black;
+  border: 2px solid black;
+}
+
   .main-title{
     text-shadow: 2px 2px black;
   }
