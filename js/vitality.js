@@ -23,7 +23,7 @@ $(document).ready(function() {
     wow.init();
   }
   $('textarea#message').on('focus', function(){
-    $(this).val('Loved your work and you sound like a very highly dedicated person with a strong skill set.');
+    $(this).val('Loved your work, you sound like a very highly dedicated person with a strong skill set.');
     $(this).off('focus');
   })
 
